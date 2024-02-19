@@ -1,0 +1,10 @@
+%chk=STO-3G
+# HF/STO-3G units=au
+
+fchk STO-3G
+
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 1.4
+
+
