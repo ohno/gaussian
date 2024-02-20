@@ -35,5 +35,10 @@
 
 # bash g16.sh PBC/graphene.gjf
 
-bash g16.sh solvent
+# bash g16.sh solvent
+# bash g16.sh anharmonic
+# grep "Frequencies --" ./anharmonic/*.out
+
+bash g16.sh isotope
+# grep "Frequencies --" ./anharmonic/*.out
 
