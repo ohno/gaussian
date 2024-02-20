@@ -23,16 +23,17 @@
 
 # bash g16.sh modeling
 
+# bash g16.sh frontier
+
 # cd fchk
 #   bash run.sh
 # cd ..
 
-cd correlation
-  bash run.sh
-cd ..
-
-# cd graphite
+# cd correlation
 #   bash run.sh
 # cd ..
 
-# bash g16.sh frontier
+# bash g16.sh PBC/graphene.gjf
+
+bash g16.sh solvent
+

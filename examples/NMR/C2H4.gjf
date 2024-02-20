@@ -1,0 +1,23 @@
+%Chk=C2H4.chk
+#p PBE1PBE/aug-cc-pVTZ opt freq
+
+C2H4 OPT
+
+0 1
+C1
+C2  C1  1.35
+H1  C1  1.1  C2  120.0
+H2  C1  1.1  C2  120.0  H1  180.0
+H3  C2  1.1  C1  120.0  H1    0.0
+H4  C2  1.1  C1  120.0  H1  180.0
+
+--Link1--
+%Chk=C2H4.chk
+%NoSave
+#p PBE1PBE/ChkBasis NMR Geom=Check Guess=Read
+
+C2H4 NMR
+
+0 1
+
+

@@ -13,7 +13,7 @@ basis = "6-31G(d,p)"
 
 # C2H2
 GaussDrive.write("./C2H2.gjf", 
-"""%chk=C2H2
+"""%chk=C2H2.chk
 # $(method)/$(basis) opt freq
 
 C2H2
@@ -29,7 +29,7 @@ H  0.0  0.0  3.0
 
 # C2H4
 GaussDrive.write("./C2H4.gjf", 
-"""%=C2H4
+"""%chk=C2H4.chk
 # $(method)/$(basis) opt freq
 
 C2H4
@@ -47,7 +47,7 @@ H  0.0 -1.0  3.0
 
 # C2H6
 GaussDrive.write("./C2H6.gjf", 
-"""%chk=C2H6
+"""%chk=C2H6.chk
 # $(method)/$(basis) opt freq
 
 C2H6

@@ -1,0 +1,12 @@
+%chk=graphene.chk
+# SVWN/STO-3G opt
+
+graphene from "Examples" of https://gaussian.com/pbc/
+
+0 1
+C                  0.000000    0.000000    0.000000
+C                  0.000000    1.429118    0.000000
+TV                 2.475315    0.000000    0.000000
+TV                -1.219952    2.133447    0.000000
+
+
