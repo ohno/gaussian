@@ -1,0 +1,11 @@
+# UMP2/6-31G(d,p) SCAN Guess=(mix,always)
+
+H2
+
+0  1
+H
+H  1  R1
+
+R1 0.5 38 0.25
+
+

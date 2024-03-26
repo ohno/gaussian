@@ -1,0 +1,18 @@
+%Chk=triplet.chk
+# HF/aug-cc-pVTZ opt
+
+O2 triplet
+
+0  3
+O  0.0  0.0  0.0
+O  0.0  0.0  2.2
+
+--Link1--
+%Chk=triplet.chk
+# CCSD/ChkBasis Geom=Check Guess=Read
+
+CCSD check
+
+0  3
+
+

@@ -1,4 +1,8 @@
 #!/bin/bash
+# Author     | Shuhei Ohno
+# Licence    | CC-BY-4.0
+# Repository | https://github.com/ohno/gaussian
+# Comments   | run on WSL(Ubuntu)
 
 # mkdir
 for method in "HF" "B3LYP" "CCSD"; do
@@ -11,7 +15,7 @@ done
 
 # input
 for method in "HF" "B3LYP" "CCSD"; do
-for basis in "STO-3G" "4-31G" "6-31G" "6-31G(d)" "6-31G(d,p)"; do
+for basis in "STO-3G" "4-31G" "6-31G" "6-31G(d)" "6-31G(d,p)" "6-311G(d,p)" "6-311++G(d,p)"; do
 
 echo "# ${method}/${basis} Units=AU opt
 

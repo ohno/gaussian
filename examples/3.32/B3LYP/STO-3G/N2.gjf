@@ -1,0 +1,13 @@
+# B3LYP/STO-3G opt freq=ReadIsotopes
+
+N2
+
+0  1
+N  0.0  0.0  0.0
+N  0.0  0.0  2.0
+
+298.15  1.0
+14
+14
+
+

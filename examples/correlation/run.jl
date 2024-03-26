@@ -9,14 +9,11 @@ cd(dirname(@__FILE__))
 
 # H
 
-str = """
-|  | HF | CID | CISD |
-| :-: | :-: | :-: | :-: |
-"""
+str = "H,HF,CID,CISD\n"
 
-for basis in ["STO-3G" "3-21G" "4-31G" "6-31G" "6-31G(d)" "6-31G(d,p)" "6-31G(3df,3pd)" "6-311G(3df,3pd)" "aug-cc-pVDZ" "aug-cc-pVTZ" "aug-cc-pVQZ" "aug-cc-pV5Z" "aug-cc-pV6Z"]
+for basis in ["STO-3G" "4-31G" "6-31G" "6-31G(d)" "6-31G(d,p)" "6-31++G(d,p)" "6-311++G(d,p)" "6-311++G(3df,2pd)" "aug-cc-pVDZ" "aug-cc-pVTZ" "aug-cc-pVQZ" "aug-cc-pV5Z" "aug-cc-pV6Z"]
 
-    global str *= "| $(basis) |"
+    global str *= replace(basis, ","=>"_")
 
     for method in ["HF" "CID" "CISD"]
         
@@ -42,7 +39,7 @@ for basis in ["STO-3G" "3-21G" "4-31G" "6-31G" "6-31G(d)" "6-31G(d,p)" "6-31G(3d
         # energy
         energy = GaussDrive.energy("$(name).out")
         
-        global str *= " $(energy) |"
+        global str *= ",$(energy)"
 
     end
     
@@ -50,20 +47,15 @@ for basis in ["STO-3G" "3-21G" "4-31G" "6-31G" "6-31G(d)" "6-31G(d,p)" "6-31G(3d
 
 end
 
-str *= "| exact | -0.500000000000 |  |  |"
-
-Markdown.parse(str) |> display
+str *= ",exact,-0.500000000000,,\n"
 
 # H2+
 
-str = """
-|  | HF | CID | CISD |
-| :-: | :-: | :-: | :-: |
-"""
+str *= "H2+,HF,CID,CISD\n"
 
-for basis in ["STO-3G" "3-21G" "4-31G" "6-31G" "6-31G(d)" "6-31G(d,p)" "6-31G(3df,3pd)" "6-311G(3df,3pd)" "aug-cc-pVDZ" "aug-cc-pVTZ" "aug-cc-pVQZ" "aug-cc-pV5Z" "aug-cc-pV6Z"]
+for basis in ["STO-3G" "4-31G" "6-31G" "6-31G(d)" "6-31G(d,p)" "6-31++G(d,p)" "6-311++G(d,p)" "6-311++G(3df,2pd)" "aug-cc-pVDZ" "aug-cc-pVTZ" "aug-cc-pVQZ" "aug-cc-pV5Z" "aug-cc-pV6Z"]
 
-    global str *= "| $(basis) |"
+    global str *= replace(basis, ","=>"_")
 
     for method in ["HF" "CID" "CISD"]
         
@@ -90,7 +82,7 @@ for basis in ["STO-3G" "3-21G" "4-31G" "6-31G" "6-31G(d)" "6-31G(d,p)" "6-31G(3d
         # energy
         energy = GaussDrive.energy("$(name).out")
         
-        global str *= " $(energy) |"
+        global str *= ",$(energy)"
 
     end
     
@@ -98,21 +90,16 @@ for basis in ["STO-3G" "3-21G" "4-31G" "6-31G" "6-31G(d)" "6-31G(d,p)" "6-31G(3d
 
 end
 
-str *= "| exact | -0.602634619 |  |  |"
+str *= "exact,-0.602634619,,\n"
 # Scott, T. C., Aubert-Frécon, M., & Grotendorst, J. (2006). Chemical physics, 324(2-3), 323-338. https://doi.org/10.1016/j.chemphys.2005.10.031
-
-Markdown.parse(str) |> display
 
 # H2
 
-str = """
-|  | HF | CID | CISD |
-| :-: | :-: | :-: | :-: |
-"""
+str *= "H2,HF,CID,CISD\n"
 
-for basis in ["STO-3G" "3-21G" "4-31G" "6-31G" "6-31G(d)" "6-31G+(d)" "6-31G(d,p)" "6-31G+(d,p)" "6-31G(3df,3pd)" "6-311G(d,p)" "6-311G+(d,p)" "6-311G++(d,p)" "6-311G(3df,3pd)" "6-311G+(3df,3pd)" "6-311G++(3df,3pd)" "aug-cc-pVDZ" "aug-cc-pVTZ" "aug-cc-pVQZ" "aug-cc-pV5Z" "aug-cc-pV6Z"]
+for basis in ["STO-3G" "4-31G" "6-31G" "6-31G(d)" "6-31G(d,p)" "6-31++G(d,p)" "6-311++G(d,p)" "6-311++G(3df,2pd)" "aug-cc-pVDZ" "aug-cc-pVTZ" "aug-cc-pVQZ" "aug-cc-pV5Z" "aug-cc-pV6Z"]
 
-    global str *= "| $(basis) |"
+    global str *= replace(basis, ","=>"_")
 
     for method in ["HF" "CID" "CISD"]
         
@@ -139,7 +126,7 @@ for basis in ["STO-3G" "3-21G" "4-31G" "6-31G" "6-31G(d)" "6-31G+(d)" "6-31G(d,p
         # energy
         energy = GaussDrive.energy("$(name).out")
         
-        global str *= " $(energy) |"
+        global str *= ",$(energy)"
 
     end
     
@@ -147,22 +134,17 @@ for basis in ["STO-3G" "3-21G" "4-31G" "6-31G" "6-31G(d)" "6-31G+(d)" "6-31G(d,p
 
 end
 
-str *= "| HF limit | -1.133629573 | best | -1.174475714 |"
+str *= "HF limit,-1.133629573,best,-1.174475714\n"
 # limit: Sundholm, D. (1988). Chemical physics letters, 149(3), 251-256. https://doi.org/10.1016/0009-2614(88)85022-X
 # best: Kurokawa, Y., Nakashima, H., & Nakatsuji, H. (2005). Physical Review A, 72(6), 062502. https://doi.org/10.1103/PhysRevA.72.062502
     
-Markdown.parse(str) |> display
-
 # N2
 
-str = """
-|  | HF | CID | CISD |
-| :-: | :-: | :-: | :-: |
-"""
+str *= "N2,HF,CID,CISD\n"
 
-for basis in ["STO-3G" "3-21G" "4-31G" "6-31G" "6-31G(d)" "6-31G(d,p)" "6-31G(3df,3pd)" "6-311G(3df,3pd)" "aug-cc-pVDZ" "aug-cc-pVTZ" "aug-cc-pVQZ"] #"aug-cc-pV5Z" "aug-cc-pV6Z"]
+for basis in ["STO-3G" "4-31G" "6-31G" "6-31G(d)" "6-31G(d,p)" "6-31++G(d,p)" "6-311++G(d,p)" "6-311++G(3df,2pd)" "aug-cc-pVDZ" "aug-cc-pVTZ" "aug-cc-pVQZ" "aug-cc-pV5Z" "aug-cc-pV6Z"]
 
-    global str *= "| $(basis) |"
+    global str *= replace(basis, ","=>"_")
 
     for method in ["HF" "CID" "CISD"]
         
@@ -190,7 +172,7 @@ for basis in ["STO-3G" "3-21G" "4-31G" "6-31G" "6-31G(d)" "6-31G(d,p)" "6-31G(3d
         energy = GaussDrive.energy("$(name).out")
         println(energy)
         
-        global str *= " $(energy) |"
+        global str *= ",$(energy)"
 
     end
     
@@ -198,9 +180,8 @@ for basis in ["STO-3G" "3-21G" "4-31G" "6-31G" "6-31G(d)" "6-31G(d,p)" "6-31G(3d
 
 end
 
-str *= "| HF limit | −108.993825700 | best | -109.542700 |"
+str *= "HF limit,-108.993825700,best,-109.542700"
 # limit: 小林正人(2019), Hartree-Fock(-Roothaan)法のエッセンス, フロンティア, http://hdl.handle.net/2115/74383
 # best: L. Bytautas and K. Ruedenberg, J. Chem. Phys., 122, 154110 (2005) https://doi.org/10.1063/1.1869493
 
-    
-Markdown.parse(str) |> display
+GaussDrive.write("./results.csv", str)

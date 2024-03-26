@@ -1,0 +1,28 @@
+%chk=Redox.chk
+# CCSD/SDD opt freq guess=mix
+
+CuO + H2
+
+0 2
+Cu  0.0  0.0  0.0
+O   0.0  0.0  1.4
+H   0.0  1.0  2.0
+H   0.0 -1.0  2.0
+
+--Link1--
+%chk=Redox.chk
+# CCSD/ChkBasis Geom=Check Guess=Read opt=(CalcAll,TS) freq
+
+TS
+
+0 2
+
+--Link1--
+%chk=Redox.chk
+# CCSD/ChkBasis Geom=Check Guess=Read IRC=(CalcAll,maxpoints=50,stepsize=10)
+
+IRC
+
+0 2
+
+

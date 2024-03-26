@@ -24,7 +24,6 @@ H                 -1.73863733   -0.02826027    0.87360726
 
 --Link1--
 %Chk=TMS.chk
-%NoSave
 #p PBE1PBE/ChkBasis NMR Geom=Check Guess=Read
 
 TMS NMR

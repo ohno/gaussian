@@ -1,0 +1,14 @@
+# MP2/6-311++G(3df,2pd) Opt Freq=Anharmonic
+
+H2O
+
+0 1
+O
+H  1  B1
+H  1  B1  2  A1
+
+B1    0.96
+A1  109.50
+
+
+

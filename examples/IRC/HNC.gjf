@@ -1,0 +1,10 @@
+# HF/6-31G(d,p) opt freq
+
+HNC optimization
+
+0 1
+H  0.0  0.0  0.0
+C  0.0  0.0  2.0
+N  0.0  0.0  1.0
+
+

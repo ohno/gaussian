@@ -26,14 +26,23 @@ Manifest.toml
 *.out
 *.chk
 *.fchk
-*/Gau-*.inp
-*/Gau-*.chk
-*/Gau-*.d2e
-*/Gau-*.rwf
-*/Gau-*.int
-*/Gau-*.skr
-*/Gau-*.nbo
+*.inp
+*.chk
+*.d2e
+*.rwf
+*.int
+*.skr
+*.nbo
 *Scratch
 
 # GAMESS, SMASH
 *.log
+
+# examples
+examples/hello/R=1.30.gjf
+examples/hello/R=1.32.gjf
+examples/hello/R=1.34.gjf
+examples/hello/R=1.36.gjf
+examples/hello/R=1.38.gjf
+*.xlsx
+*.png

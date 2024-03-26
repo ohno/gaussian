@@ -1,0 +1,60 @@
+%chk=SN2.chk
+# HF/6-31G(d,p) opt=ModRedundant freq pop=nbo
+
+Cl - CH3 - Br
+
+-1 1
+H     0.72000000   -0.45000000    0.00000000
+H    -1.48500000    0.82305735    0.00000000
+H    -1.48500000   -1.72305734    0.00000000
+C    -0.75000000   -0.45000000    0.00000000
+Br   -0.75000000   -0.45000000   -1.28000000
+Cl   -0.75000000   -0.45000000    1.50000000
+
+B 4 6 S 25 0.1
+
+--Link1--
+%chk=SN2.chk
+# HF/6-31G(d,p) opt=Z-matrix freq
+
+Opt
+
+-1 1
+H              
+H   1  B1
+H   2  B2  1  A1
+C   2  B3  1  A2  3  D1  0
+Cl  4  B4  2  A3  1  D2  0
+Br  4  B5  2  A4  1  D3  0
+
+B4             1.76
+B5             1.91
+
+B1             2.55
+B2             2.55
+B3             1.47
+A1            60.00
+A2            30.00
+A3            90.00
+A4            90.00
+D1             0.00
+D2           -90.00
+D3            90.00
+
+--Link1--
+%chk=SN2.chk
+# HF/ChkBasis Geom=Check Guess=Read opt=(CalcAll,TS) freq
+
+TS
+
+-1 1
+
+--Link1--
+%chk=SN2.chk
+# HF/ChkBasis Geom=Check Guess=Read IRC=(CalcAll,maxpoints=50,stepsize=5)
+
+IRC
+
+-1 1
+
+

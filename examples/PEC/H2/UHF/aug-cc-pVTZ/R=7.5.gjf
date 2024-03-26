@@ -1,0 +1,10 @@
+# UHF/aug-cc-pVTZ units=au guess=mix geom=nocrowd
+
+H2
+
+0  1
+H  0.0  0.0  0.0
+H  0.0  0.0  7.5
+
+
+ 

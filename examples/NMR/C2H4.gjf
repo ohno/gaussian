@@ -13,7 +13,6 @@ H4  C2  1.1  C1  120.0  H1  180.0
 
 --Link1--
 %Chk=C2H4.chk
-%NoSave
 #p PBE1PBE/ChkBasis NMR Geom=Check Guess=Read
 
 C2H4 NMR

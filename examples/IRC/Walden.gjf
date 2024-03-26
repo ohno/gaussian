@@ -1,0 +1,48 @@
+%chk=Walden.chk
+# HF/6-31G(d,p) opt freq
+
+NH3 optimization
+
+0 1
+N
+H  1  B1
+H  1  B1  2  A1
+H  1  B1  3  A1  2  D1  0
+
+B1 =   1.0
+A1 = 120.0
+D1 = 180.0
+
+--Link1--
+%chk=Walden.chk
+# HF/6-31G(d,p) opt=Z-matrix freq
+
+NH3 optimization in 2D plane
+
+0 1
+N
+H  1  B1
+H  1  B1  2  A1
+H  1  B1  3  A1  2  D1  0
+
+B1 =   1.0  F
+A1 = 120.0
+D1 = 180.0
+
+--Link1--
+%chk=Walden.chk
+# HF/ChkBasis Geom=Check Guess=Read opt=(CalcAll,TS) freq
+
+NH3(plane) - TS
+
+0 1
+
+--Link1--
+%chk=Walden.chk
+# HF/ChkBasis Geom=Check Guess=Read IRC=(CalcAll,maxpoints=50,stepsize=10)
+
+NH3 - TS - H3N
+
+0 1
+
+

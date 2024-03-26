@@ -1,0 +1,9 @@
+# RHF/6-31G(d,p) units=au geom=nocrowd
+
+H2
+
+0  1
+H  0.0  0.0  0.0
+H  0.0  0.0  1.6
+
+

@@ -1,10 +1,6 @@
-job
-  runtype = energy
-  method = HF
-  basis = 6-31G(d)
+job runtype=energy method=HF basis=6-31G(d)
 
-control
-  bohr = .true.
+control bohr=.true.
 
 geom
 H  0.0  0.0  0.0

@@ -1,0 +1,16 @@
+# HF/GEN
+
+Test for GEN(inside)
+
+0 2
+H 0.0 0.0 0.0
+
+! STO-3G from Basis Set Exchange: https://www.basissetexchange.org/basis/sto-3g/format/gaussian94/?version=1&elements=1
+H     0
+S    3   1.00
+      0.3425250914D+01       0.1543289673D+00
+      0.6239137298D+00       0.5353281423D+00
+      0.1688554040D+00       0.4446345422D+00
+****
+
+

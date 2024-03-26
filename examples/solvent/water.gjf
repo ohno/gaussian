@@ -1,6 +1,6 @@
-# B3LYP/6-31G(d,p) OPT SCRF=(Solvent=Water)
+# B3LYP/6-31G(d,p) opt freq SCRF=(Solvent=Water)
 
-NH3
+NH3(aq)
 
 0 1
 N  

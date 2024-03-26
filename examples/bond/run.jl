@@ -71,4 +71,4 @@ GaussDrive.run("./C2H4.gjf")
 GaussDrive.run("./C2H6.gjf")
 
 # make table
-GaussDrive.table("./", sort=false) |> Markdown.parse |> display
+GaussDrive.table("./") |> Markdown.parse |> display

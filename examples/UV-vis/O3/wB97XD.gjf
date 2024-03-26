@@ -1,0 +1,18 @@
+%chk=wB97XD.chk
+# wB97XD/aug-cc-pVTZ opt freq
+
+opt
+
+0 1
+O  0.0  0.0   0.0
+O  0.0  1.4   1.4
+O  0.0  1.4  -1.4
+
+
+--Link1--
+%Chk=wB97XD.chk
+# TD wB97XD/ChkBasis Geom=Check Guess=Read
+
+absorption
+
+0 1

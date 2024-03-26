@@ -1,0 +1,32 @@
+%chk=isomerization.chk
+# HF/6-31G(d,p) opt=Z-matrix freq
+
+HCN optimization in 90-degree
+
+0 1
+H
+C   1  B1
+N   2  B2  1  A1
+
+B1   1.0
+B2   1.0
+
+A1  90.0
+
+--Link1--
+%chk=isomerization.chk
+# HF/ChkBasis Geom=Check Guess=Read opt=(CalcAll,TS) freq
+
+TS
+
+0 1
+
+--Link1--
+%chk=isomerization.chk
+# HF/ChkBasis Geom=Check Guess=Read IRC=(CalcAll,maxpoints=60,StepSize=20)
+
+IRC
+
+0 1
+
+

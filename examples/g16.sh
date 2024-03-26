@@ -18,7 +18,7 @@ export GAUSS_SCRDIR=./Scratch/
 
 # running g16.exe $1
 function run() {
-  echo "g16.exe $1"
+  echo -n "g16.exe $1 "
   if [[ -e ${1//.gjf/.out} ]]; then
     echo "> already done"
   else
