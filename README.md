@@ -6,4 +6,4 @@
 - 講師　大野 周平 (D1), 高桑 美央 (M2)
 - 監修　立川 仁典 (教授)
 
-資料は[こちら](https://github.com/ohno/html-example/archive/refs/heads/main.zip)からダウンロードできます.
+資料は[Code > Download ZIP](https://github.com/ohno/html-example/archive/refs/heads/main.zip)からダウンロードできます.
